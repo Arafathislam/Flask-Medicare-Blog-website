@@ -1,0 +1,23 @@
+{%extends "layout.html"%}
+{%block content%}
+      <div class="content-section">
+          <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+              <legend class="f text-center mb-4">Contact Us</legend>
+              <dir class="form-group">
+                  {{form.email.label(class="f form-control-label")}}
+                  {{form.email(class="form-control form-control-lg", placeholder="Enter your email")}}
+              </dir>
+              <dir class="form-group">
+                {{form.msg.label(class="f form-control-label")}}
+                {{form.msg(class="form-control form-control-lg" ,placeholder="Enter your opinion")}}
+            </dir>
+
+            </fieldset>
+            <div class="form-group f text-center">
+              {{ form.submit(class="btn btn-outline-primary") }}
+          </div>
+          </form>
+      </div>
+{%endblock content%}

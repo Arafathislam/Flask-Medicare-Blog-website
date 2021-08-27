@@ -1,0 +1,48 @@
+{%extends "layout.html"%}
+{%block content%}
+<div class="content-section text-center">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="f text-center mb-4">Breast Cancer Detection</legend>
+            <dir class="form-group">
+                {{form.mean_radius(class="form form-control-sm", placeholder=" mean radius")}}
+                {{form.mean_texture(class="form form-control-sm", placeholder=" mean_texture")}}
+                {{form.mean_perimete(class="form form-control-sm", placeholder=" mean perimete")}}
+                {{form.mean_area(class="form form-control-sm", placeholder=" mean area")}}
+                {{form.mean_smoothness(class="form form-control-sm", placeholder=" mean smoothness")}}
+                {{form.mean_compactness(class="form form-control-sm", placeholder=" mean compactness")}}
+                {{form.mean_concavity(class="form form-control-sm", placeholder=" mean concavity")}}
+                {{form.mean_concave_points(class="form form-control-sm", placeholder=" mean concave points")}}
+                {{form.mean_symmetry(class="form form-control-sm", placeholder=" mean symmetry")}}
+                {{form.mean_fractal_dimension(class="form form-control-sm", placeholder=" mean fractal dimension")}}
+                {{form.radius_error(class="form form-control-sm", placeholder=" radius error")}}
+                {{form.texture_error(class="form form-control-sm", placeholder=" texture error")}}
+                {{form.perimeter_error(class="form form-control-sm", placeholder=" perimeter error")}}
+                {{form.area_error(class="form form-control-sm", placeholder=" area error")}}
+                {{form.smoothness_error(class="form form-control-sm", placeholder="smoothness error")}}
+                {{form.compactness_error(class="form form-control-sm", placeholder="compactness error")}}
+                {{form.concavity_error(class="form form-control-sm", placeholder="concavity error")}}
+                {{form.concave_points_error(class="form form-control-sm", placeholder="concave points error")}}
+                {{form.symmetry_error(class="form form-control-sm", placeholder="symmetry error")}}
+                {{form.fractal_dimension_error(class="form form-control-sm", placeholder="fractal dimension error")}}
+                {{form.worst_radius(class="form form-control-sm", placeholder="worst radius")}}
+                {{form.worst_texture(class="form form-control-sm", placeholder="worst texture")}}
+                {{form.worst_perimeter(class="form form-control-sm", placeholder="worst perimeter")}}
+                {{form.worst_area(class="form form-control-sm", placeholder="worst area")}}
+                {{form.worst_smoothness(class="form form-control-sm", placeholder="worst smoothness")}}
+                {{form.worst_compactness(class="form form-control-sm", placeholder="worst compactness")}}
+                {{form.worst_concavity(class="form form-control-sm", placeholder="worst concavity")}}
+                {{form.worst_concave_points(class="form form-control-sm", placeholder="worst concave points")}}
+                {{form.worst_symmetry(class="form form-control-sm", placeholder="worst symmetry")}}
+                {{form.worst_fractal_dimension(class="form form-control-sm", placeholder="worst fractal dimension")}}
+
+            </dir>
+        </fieldset>
+        <div class="form-group f text-center">
+            {{ form.submit(class="btn btn-outline-primary") }}
+        </div>
+    </form>
+
+</div>
+{%endblock content%}
